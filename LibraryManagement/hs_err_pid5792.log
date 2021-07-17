@@ -1,0 +1,220 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x5f88c018, pid=5792, tid=872
+#
+# JRE version: 7.0-b141
+# Java VM: Java HotSpot(TM) Client VM (21.0-b11 mixed mode, sharing windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x4c018]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01a69400):  JavaThread "main" [_thread_in_vm, id=872, stack(0x00310000,0x00360000)]
+
+siginfo: ExceptionCode=0xc0000006
+
+Error accessing class data sharing archive. Mapped file inaccessible during execution,  possible disk/network problem.
+
+Registers:
+EAX=0x01a69d04, EBX=0x0000000c, ECX=0x38345cd0, EDX=0x01a69d00
+ESP=0x0035e724, EBP=0x0035e724, ESI=0x38345cd0, EDI=0x38345cd0
+EIP=0x5f88c018, EFLAGS=0x00010287
+
+Top of Stack: (sp=0x0035e724)
+0x0035e724:   0035e738 5f8d46c0 01a69d04 01a69400
+0x0035e734:   38345cd0 0035e780 5f869aa6 01a69d04
+0x0035e744:   01a69400 38341ba0 0035e830 01a69400
+0x0035e754:   01a69400 01a69cfc 00000001 77fa1201
+0x0035e764:   0000000c 01a6019c 01a60000 006e0005
+0x0035e774:   00000071 00000000 01a69d00 0035e7a4
+0x0035e784:   5f869ecc 0035e830 01a69cb8 00000000
+0x0035e794:   01a69400 01a69400 01a69400 38d90cc0 
+
+Instructions: (pc=0x5f88c018)
+0x5f88bff8:   d0 52 50 68 80 92 a9 5f e8 eb ba 09 00 83 c4 0c
+0x5f88c008:   c3 cc cc cc cc cc cc cc 55 8b ec 8b 45 08 8b 08
+0x5f88c018:   8b 41 18 8b d0 c1 ea 0a f6 c2 01 74 07 b8 06 00
+0x5f88c028:   00 00 5d c3 8b d0 81 e2 00 11 00 10 81 fa 00 11 
+
+
+Register to memory mapping:
+
+EAX=0x01a69d04 is an unknown value
+EBX=0x0000000c is an unknown value
+ECX=0x38345cd0 is an oop
+{method} 
+ - klass: {other class}
+EDX=0x01a69d00 is an unknown value
+ESP=0x0035e724 is pointing into the stack for thread: 0x01a69400
+EBP=0x0035e724 is pointing into the stack for thread: 0x01a69400
+ESI=0x38345cd0 is an oop
+{method} 
+ - klass: {other class}
+EDI=0x38345cd0 is an oop
+{method} 
+ - klass: {other class}
+
+
+Stack: [0x00310000,0x00360000],  sp=0x0035e724,  free space=313k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x4c018]
+V  [jvm.dll+0x946c0]
+V  [jvm.dll+0x29aa6]
+V  [jvm.dll+0x29ecc]
+V  [jvm.dll+0x29f2d]
+V  [jvm.dll+0x2b388]
+V  [jvm.dll+0x2b9eb]
+V  [jvm.dll+0x27b7b]
+V  [jvm.dll+0x2988c]
+V  [jvm.dll+0x29ecc]
+V  [jvm.dll+0x29f2d]
+V  [jvm.dll+0x2b388]
+V  [jvm.dll+0x2b9eb]
+V  [jvm.dll+0x2ba16]
+V  [jvm.dll+0xd1ca6]
+C  [java.dll+0x184f]  Java_java_lang_ClassLoader_findBootstrapClass+0x68
+j  java.lang.ClassLoader.findBootstrapClass(Ljava/lang/String;)Ljava/lang/Class;+0
+j  java.lang.ClassLoader.findBootstrapClassOrNull(Ljava/lang/String;)Ljava/lang/Class;+12
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+48
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+38
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x11b6ee]
+V  [jvm.dll+0x1bfd3e]
+V  [jvm.dll+0x11b8e3]
+V  [jvm.dll+0x11b9bf]
+V  [jvm.dll+0x2a225]
+V  [jvm.dll+0x2b388]
+V  [jvm.dll+0x2b9eb]
+V  [jvm.dll+0x2ba3a]
+V  [jvm.dll+0xc7c45]
+V  [jvm.dll+0xca3fb]
+C  [verify.dll+0x15cd]
+C  [verify.dll+0x1d53]
+C  [verify.dll+0x2c67]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.ClassLoader.findBootstrapClass(Ljava/lang/String;)Ljava/lang/Class;+0
+j  java.lang.ClassLoader.findBootstrapClassOrNull(Ljava/lang/String;)Ljava/lang/Class;+12
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+48
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+38
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+j  Main.main([Ljava/lang/String;)V+21
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x03d7d400 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=4620, stack(0x041c0000,0x04210000)]
+  0x03d0a000 JavaThread "AWT-Windows" daemon [_thread_in_native, id=6004, stack(0x04000000,0x04050000)]
+  0x03d09800 JavaThread "AWT-Shutdown" [_thread_blocked, id=4864, stack(0x04080000,0x040d0000)]
+  0x03d06c00 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3144, stack(0x01930000,0x01980000)]
+  0x0143e000 JavaThread "Service Thread" daemon [_thread_blocked, id=5972, stack(0x03ca0000,0x03cf0000)]
+  0x01429000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=6064, stack(0x019d0000,0x01a20000)]
+  0x01427c00 JavaThread "Attach Listener" daemon [_thread_blocked, id=5236, stack(0x01470000,0x014c0000)]
+  0x01424800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2400, stack(0x03b70000,0x03bc0000)]
+  0x0141cc00 JavaThread "Finalizer" daemon [_thread_blocked, id=2528, stack(0x01980000,0x019d0000)]
+  0x01418000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3632, stack(0x014e0000,0x01530000)]
+=>0x01a69400 JavaThread "main" [_thread_in_vm, id=872, stack(0x00310000,0x00360000)]
+
+Other Threads:
+  0x01416800 VMThread [stack: 0x018d0000,0x01920000] [id=4792]
+  0x01452000 WatcherThread [stack: 0x03aa0000,0x03af0000] [id=2152]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 2388K [0x236d0000, 0x23c20000, 0x28c20000)
+  eden space 4416K,  54% used [0x236d0000, 0x239250e0, 0x23b20000)
+  from space 512K,   0% used [0x23b20000, 0x23b20000, 0x23ba0000)
+  to   space 512K,   0% used [0x23ba0000, 0x23ba0000, 0x23c20000)
+ tenured generation   total 10944K, used 0K [0x28c20000, 0x296d0000, 0x336d0000)
+   the space 10944K,   0% used [0x28c20000, 0x28c20000, 0x28c20200, 0x296d0000)
+ compacting perm gen  total 12288K, used 813K [0x336d0000, 0x342d0000, 0x376d0000)
+   the space 12288K,   6% used [0x336d0000, 0x3379b4d0, 0x3379b600, 0x342d0000)
+    ro space 10240K,  44% used [0x376d0000, 0x37b4e0f8, 0x37b4e200, 0x380d0000)
+    rw space 12288K,  54% used [0x380d0000, 0x3874d330, 0x3874d400, 0x38cd0000)
+
+Code Cache  [0x01a70000, 0x01b00000, 0x03a70000)
+ total_blobs=275 nmethods=57 adapters=153 free_code_cache=32211Kb largest_free_block=32984512
+
+Dynamic libraries:
+0x01340000 - 0x0136e000 	C:\Program Files\Java\jdk1.7.0\jre\bin\java.exe
+0x77870000 - 0x779ac000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77180000 - 0x77254000 	C:\Windows\system32\kernel32.dll
+0x75b90000 - 0x75bda000 	C:\Windows\system32\KERNELBASE.dll
+0x77620000 - 0x776c0000 	C:\Windows\system32\ADVAPI32.dll
+0x75cc0000 - 0x75d6c000 	C:\Windows\system32\msvcrt.dll
+0x779c0000 - 0x779d9000 	C:\Windows\SYSTEM32\sechost.dll
+0x777c0000 - 0x77861000 	C:\Windows\system32\RPCRT4.dll
+0x75ee0000 - 0x75fa9000 	C:\Windows\system32\USER32.dll
+0x76ef0000 - 0x76f3e000 	C:\Windows\system32\GDI32.dll
+0x77a90000 - 0x77a9a000 	C:\Windows\system32\LPK.dll
+0x770e0000 - 0x7717d000 	C:\Windows\system32\USP10.dll
+0x748d0000 - 0x74a6e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\COMCTL32.dll
+0x779f0000 - 0x77a47000 	C:\Windows\system32\SHLWAPI.dll
+0x77270000 - 0x7728f000 	C:\Windows\system32\IMM32.DLL
+0x76f40000 - 0x7700c000 	C:\Windows\system32\MSCTF.dll
+0x62670000 - 0x6272e000 	C:\Program Files\Java\jdk1.7.0\jre\bin\msvcr100.dll
+0x5f840000 - 0x5fb55000 	C:\Program Files\Java\jdk1.7.0\jre\bin\client\jvm.dll
+0x71fd0000 - 0x71fd7000 	C:\Windows\system32\WSOCK32.dll
+0x77a50000 - 0x77a85000 	C:\Windows\system32\WS2_32.dll
+0x77260000 - 0x77266000 	C:\Windows\system32\NSI.dll
+0x739e0000 - 0x73a12000 	C:\Windows\system32\WINMM.dll
+0x6da30000 - 0x6da3c000 	C:\Program Files\Java\jdk1.7.0\jre\bin\verify.dll
+0x6aa20000 - 0x6aa40000 	C:\Program Files\Java\jdk1.7.0\jre\bin\java.dll
+0x779b0000 - 0x779b5000 	C:\Windows\system32\PSAPI.DLL
+0x696c0000 - 0x696d3000 	C:\Program Files\Java\jdk1.7.0\jre\bin\zip.dll
+0x614f0000 - 0x61632000 	C:\Program Files\Java\jdk1.7.0\jre\bin\awt.dll
+0x76c00000 - 0x76c8f000 	C:\Windows\system32\OLEAUT32.dll
+0x77290000 - 0x773ec000 	C:\Windows\system32\ole32.dll
+0x73ae0000 - 0x73af3000 	C:\Windows\system32\DWMAPI.DLL
+0x74720000 - 0x74760000 	C:\Windows\system32\uxtheme.dll
+0x75940000 - 0x7594c000 	C:\Windows\system32\CRYPTBASE.dll
+0x75fb0000 - 0x76bf9000 	C:\Windows\system32\SHELL32.dll
+0x696e0000 - 0x696f4000 	C:\Program Files\Java\jdk1.7.0\jre\bin\net.dll
+0x75400000 - 0x7543c000 	C:\Windows\system32\mswsock.dll
+0x753f0000 - 0x753f6000 	C:\Windows\System32\wship6.dll
+0x6dd30000 - 0x6dd3f000 	C:\Program Files\Java\jdk1.7.0\jre\bin\nio.dll
+0x736e0000 - 0x73705000 	C:\Program Files\Java\jdk1.7.0\jre\bin\jpeg.dll
+0x65dc0000 - 0x65dea000 	C:\Program Files\Java\jdk1.7.0\jre\bin\fontmanager.dll
+0x62ea0000 - 0x62ed1000 	C:\Program Files\Java\jdk1.7.0\jre\bin\t2k.dll
+
+VM Arguments:
+jvm_args: -Xbootclasspath/p:E:\project\JavaProjects\LibraryManagement\Library\${endorsed.classpath} -Dfile.encoding=UTF-8 
+java_command: Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Java\jdk1.7.0\bin;
+USERNAME=infomatics
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 13, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 13, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 2059228k(936088k free), swap 4118456k(2556160k free)
+
+vm_info: Java HotSpot(TM) Client VM (21.0-b11) for windows-x86 JRE (1.7.0-ea-b141), built on May  5 2011 02:25:17 by "java_re" with unknown MS VC++:1600
+
+time: Tue Dec 04 17:52:45 2012
+elapsed time: 28 seconds
+
